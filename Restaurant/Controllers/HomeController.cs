@@ -14,7 +14,6 @@ namespace Restaurant.Controllers
       public ActionResult Index()
       {
         return View();
-        // return ne w EmptyResult();
       }
     }
 }

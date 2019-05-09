@@ -1,7 +1,6 @@
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
 using Restaurant.Models;
-using System;
+using System.Collections.Generic;
 
 namespace Restaurant.Controllers
 {
@@ -29,11 +28,19 @@ namespace Restaurant.Controllers
       return RedirectToAction("Index");
     }
 
+    // [HttpPost("/cuisines/delete")]
+    // public ActionResult Delete(int id, string name, string origin)
+    // {
+    //   Cuisine newCuisine = new Cuisine(name, origin, id);
+    //   newCuisine.Save();
+    //   return RedirectToAction("Index", "Cuisine", model);
+    // }
+
     [HttpGet("/cuisines/{id}")]
     public ActionResult Show(int id)
     {
-      Cuisine hellbeast = Cuisine.Find(id);
-      return View(hellbeast);
+      Cuisine cuisine = Cuisine.Find(id);
+      return View(cuisine);
     }
   }
 }

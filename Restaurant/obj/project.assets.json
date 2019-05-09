@@ -2709,7 +2709,7 @@
           }
         }
       },
-      "MySqlConnector/0.53.0": {
+      "MySqlConnector/0.47.1": {
         "type": "package",
         "compile": {
           "lib/netcoreapp2.1/MySqlConnector.dll": {}
@@ -7216,20 +7216,19 @@
         "version.txt"
       ]
     },
-    "MySqlConnector/0.53.0": {
-      "sha512": "4jP7FFwcjNLoGD67jVQVUjBIPEXNZ8IW5fQEFhjoPHi+7xuJyUDXOBvBix+HrfeJy6T+Wc5NVQJwgUUuBeljNA==",
+    "MySqlConnector/0.47.1": {
+      "sha512": "xaguKNuiYX34PYnvxJ+ATr6SoNjbJZqWclqsmqsqdNg68sdjqHP8PPp8IOpuiD/ai0S64dUth3//c7XaArZQQg==",
       "type": "package",
-      "path": "mysqlconnector/0.53.0",
+      "path": "mysqlconnector/0.47.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/MySqlConnector.dll",
         "lib/net461/MySqlConnector.dll",
-        "lib/net471/MySqlConnector.dll",
         "lib/netcoreapp2.1/MySqlConnector.dll",
         "lib/netstandard1.3/MySqlConnector.dll",
         "lib/netstandard2.0/MySqlConnector.dll",
-        "mysqlconnector.0.53.0.nupkg.sha512",
+        "mysqlconnector.0.47.1.nupkg.sha512",
         "mysqlconnector.nuspec"
       ]
     },
@@ -12096,9 +12095,10 @@
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.2": [
       "Microsoft.AspNetCore.App >= 2.2.0",
+      "Microsoft.AspNetCore.Mvc >= 2.2.0",
       "Microsoft.AspNetCore.Razor.Design >= 2.2.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "MySqlConnector >= 0.53.0"
+      "MySqlConnector >= 0.47.1"
     ]
   },
   "packageFolders": {
@@ -12146,6 +12146,10 @@
             "version": "[2.2.0, )",
             "autoReferenced": true
           },
+          "Microsoft.AspNetCore.Mvc": {
+            "target": "Package",
+            "version": "[2.2.0, )"
+          },
           "Microsoft.AspNetCore.Razor.Design": {
             "suppressParent": "All",
             "target": "Package",
@@ -12159,7 +12163,7 @@
           },
           "MySqlConnector": {
             "target": "Package",
-            "version": "[0.53.0, )"
+            "version": "[0.47.1, )"
           }
         },
         "imports": [

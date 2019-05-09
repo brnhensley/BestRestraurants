@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello friend!</title>
+    <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body>
+    <h1>Post a new Cuisine</h1>
+
+    <form action="/cuisines" method="post">
+      <label for="name">name of cuisine:</label>
+      <input id="name" name="name" type="text"><br>
+
+      <label for="origin">origin of cuisine:</label>
+      <input id="origin" name="origin" type="text"><br>
+
+      <button type="submit">Submit</button>
+    </form>
+
+  </body>
+</html>

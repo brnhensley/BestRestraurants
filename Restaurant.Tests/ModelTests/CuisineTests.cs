@@ -33,22 +33,22 @@ namespace Restaurant.Tests
       CollectionAssert.AreEqual(newList, result);
     }
 
-    [TestMethod]
-    public void GetAll_ReturnsCuisines_CuisineList()
-    {
-      //Arrange
-      Cuisine newCuisine1 = new Cuisine("Cerebus", "Greece");
-      newCuisine1.Save();
-      Cuisine newCuisine2 = new Cuisine("Baal", "Egyptian");
-      newCuisine2.Save();
-      List<Cuisine> expectedResult = new List<Cuisine> { newCuisine1, newCuisine2 };
-
-      //Act
-      List<Cuisine> actualResult = Cuisine.GetAll();
-
-      //Assert
-      CollectionAssert.AreEqual(expectedResult, actualResult);
-    }
+    // [TestMethod]
+    // public void GetAll_ReturnsCuisines_CuisineList()
+    // {
+    //   //Arrange
+    //   Cuisine newCuisine1 = new Cuisine("Cerebus", "Greece");
+    //   newCuisine1.Save();
+    //   Cuisine newCuisine2 = new Cuisine("Baal", "Egyptian");
+    //   newCuisine2.Save();
+    //   List<Cuisine> expectedResult = new List<Cuisine> { newCuisine1, newCuisine2 };
+    //
+    //   //Act
+    //   List<Cuisine> actualResult = Cuisine.GetAll();
+    //
+    //   //Assert
+    //   CollectionAssert.AreEqual(expectedResult, actualResult);
+    // }
 
     [TestMethod]
     public void Equals_ReturnsTrueIfNameAreTheSame_Cuisine()
