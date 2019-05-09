@@ -25,30 +25,31 @@ namespace BestRestaurant.Tests
     {
       //Arrange
       List<Restaurant> newList = new List<Restaurant> { };
+      Console.WriteLine(newList.Count);
 
       //Act
       List<Restaurant> result = Restaurant.GetAll();
-
+      Console.WriteLine(result.Count);
       //Assert
       CollectionAssert.AreEqual(newList, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsRestaurants_RestaurantList()
-    // {
-    //   //Arrange
-    //   Restaurant newRestaurant1 = new Restaurant("Cerebus", "Greece");
-    //   newRestaurant1.Save();
-    //   Restaurant newRestaurant2 = new Restaurant("Baal", "Egyptian");
-    //   newRestaurant2.Save();
-    //   List<Restaurant> expectedResult = new List<Restaurant> { newRestaurant1, newRestaurant2 };
-    //
-    //   //Act
-    //   List<Restaurant> actualResult = Restaurant.GetAll();
-    //
-    //   //Assert
-    //   CollectionAssert.AreEqual(expectedResult, actualResult);
-    // }
+    [TestMethod]
+    public void GetAll_ReturnsRestaurants_RestaurantList()
+    {
+      //Arrange
+      Restaurant newRestaurant1 = new Restaurant("Cerebus", "Greece");
+      newRestaurant1.Save();
+      Restaurant newRestaurant2 = new Restaurant("Baal", "Egyptian");
+      newRestaurant2.Save();
+      List<Restaurant> expectedResult = new List<Restaurant> { newRestaurant1, newRestaurant2 };
+
+      //Act
+      List<Restaurant> actualResult = Restaurant.GetAll();
+
+      //Assert
+      CollectionAssert.AreEqual(expectedResult, actualResult);
+    }
 
     [TestMethod]
     public void Equals_ReturnsTrueIfNameAreTheSame_Restaurant()

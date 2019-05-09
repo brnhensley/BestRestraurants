@@ -146,7 +146,7 @@ namespace BestRestaurant.Models
         bool nameEquality = (this.Name == newRestaurant.Name);
         bool typeEquality = (this.Type == newRestaurant.Type);
         bool idEquality = (this.Id == newRestaurant.Id);
-        return (idEquality && nameEquality && typeEquality);
+        return (nameEquality && typeEquality && idEquality);
       }
     }
   }
