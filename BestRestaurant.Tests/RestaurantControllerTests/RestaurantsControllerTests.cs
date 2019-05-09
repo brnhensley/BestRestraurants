@@ -7,23 +7,22 @@ using BestRestaurant.Models;
 namespace BestRestaurant.Tests
 {
   [TestClass]
-  public class CuisineControllerTest
+  public class RestaurantControllerTest
   {
 
-
-    // public CuisineTest()
+    // public RestaurantTest()
     // {
-    //   DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=restaurant_tests;";
+    //   DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=restaurant_test;";
     // }
 
     [TestMethod]
     public void Create_ReturnsCorrectActionType_RedirectToActionResult()
     {
       //Arrange
-      CuisineController controller = new CuisineController();
+      RestaurantController controller = new RestaurantController();
 
       //Act
-      IActionResult view = controller.Create(1, "Italian", "Italy");
+      IActionResult view = controller.Create("Italian", "Italy", 1);
 
       //Assert
       Assert.IsInstanceOfType(view, typeof(RedirectToActionResult));
@@ -33,8 +32,8 @@ namespace BestRestaurant.Tests
     public void Create_RedirectsToCorrectAction_Index()
     {
       //Arrange
-      CuisineController controller = new CuisineController();
-      RedirectToActionResult actionResult = controller.Create(1, "Italian", "Italy") as RedirectToActionResult;
+      RestaurantController controller = new RestaurantController();
+      RedirectToActionResult actionResult = controller.Create("Italian", "Italy", 1) as RedirectToActionResult;
 
       //Act
       string result = actionResult.ActionName;
