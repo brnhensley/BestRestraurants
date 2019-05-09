@@ -17,7 +17,7 @@ namespace Restaurant.Tests
 
     public CuisineTest()
     {
-      DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=restaurant_test;";
+      DBConfiguration.ConnectionString = "server=localhost;user id=root;password=root;port=8889;database=restaurant_tests;";
     }
 
     [TestMethod]

@@ -12108,9 +12108,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Resturaunt.csproj",
-      "projectName": "Resturaunt",
-      "projectPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Resturaunt.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Restaurant.csproj",
+      "projectName": "Restaurant",
+      "projectPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Restaurant.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
       "outputPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/obj/",
       "projectStyle": "PackageReference",

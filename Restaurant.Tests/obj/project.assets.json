@@ -1667,6 +1667,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XPath.XmlDocument.dll": {}
         }
+      },
+      "Restaurant/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.2",
+        "dependencies": {
+          "MySqlConnector": "0.53.0"
+        },
+        "compile": {
+          "bin/placeholder/Restaurant.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Restaurant.dll": {}
+        }
       }
     }
   },
@@ -5854,6 +5867,11 @@
         "system.xml.xpath.xmldocument.4.0.1.nupkg.sha512",
         "system.xml.xpath.xmldocument.nuspec"
       ]
+    },
+    "Restaurant/1.0.0": {
+      "type": "project",
+      "path": "../Restaurant/Restaurant.csproj",
+      "msbuildProject": "../Restaurant/Restaurant.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5862,7 +5880,8 @@
       "MSTest.TestFramework >= 1.1.11",
       "Microsoft.NET.Test.Sdk >= 15.0.0",
       "Microsoft.NETCore.App >= 2.2.0",
-      "MySqlConnector >= 0.53.0"
+      "MySqlConnector >= 0.53.0",
+      "Restaurant >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -5892,7 +5911,11 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Restaurant.csproj": {
+              "projectPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant/Restaurant.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
