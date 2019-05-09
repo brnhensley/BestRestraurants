@@ -48,7 +48,7 @@ namespace BestRestaurant.Models
       MySqlConnection conn = DB.Connection();
       conn.Open();
       var cmd = conn.CreateCommand() as MySqlCommand;
-      cmd.CommandText = @"DELETE FROM restaurants";
+      cmd.CommandText = @"DELETE FROM restaurants;";
       cmd.ExecuteNonQuery();
       conn.Close();
       if (conn != null)
@@ -117,6 +117,22 @@ namespace BestRestaurant.Models
       return foundRestaurant;
     }
 
+    public void DeleteRestaurant()
+    {
+      MySqlConnection conn = DB.Connection();
+      conn.Open();
+      var cmd = conn.CreateCommand() as MySqlCommand;
+      cmd.CommandText = @"DELETE FROM restaurants WHERE id = @RestaurantId;";
+      MySqlParameter restaurantIdParameter = new MySqlParameter();
+      restaurantIdParameter.ParameterName = "@RestaurantId";
+      restaurantIdParameter.Value = this.Id;
+      cmd.Parameters.Add(restaurantIdParameter);
+      cmd.ExecuteNonQuery();
+      if (conn != null)
+      {
+        conn.Close();
+      }
+    }
 
     public override bool Equals(System.Object otherRestaurant)
     {

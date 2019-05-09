@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Hello friend!</title>
+  </head>
+  <body>
+    <h1>Restaurant Details: </h1>
+
+    <h2>@Model.Name</h2>
+    <h2>@Model.Type</h2>
+
+
+    <a href='/restaurants/new'>Add another restaurant</a>
+    <a href='/restaurants'>View all restaurants</a>
+
+    <form action="/restaurants/@Model.Id/delete" method="post">
+    <button type="submit" name="button">Delete Restaurants</button>
+    </form>
+
+  </body>
+</html>

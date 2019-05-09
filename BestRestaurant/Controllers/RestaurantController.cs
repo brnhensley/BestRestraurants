@@ -21,20 +21,29 @@ namespace BestRestaurant.Controllers
     }
 
     [HttpPost("/restaurants")]
-    public ActionResult Create(string name, string origin, int id)
+    public ActionResult Create(string name, string restaurantType, int id)
     {
-      Restaurant newRestaurant = new Restaurant(name, origin, id);
+      Restaurant newRestaurant = new Restaurant(name, restaurantType, id);
       newRestaurant.Save();
       return RedirectToAction("Index");
     }
 
-    // [HttpPost("/restaurants/delete")]
-    // public ActionResult Delete(int id, string name, string origin)
-    // {
-    //   Restaurant newRestaurant = new Restaurant(name, origin, id);
-    //   newRestaurant.Save();
-    //   return RedirectToAction("Index", "Restaurant", model);
-    // }
+    [HttpPost("/restaurants/delete")]
+    public ActionResult DeleteAll()
+    {
+      Restaurant.ClearAll();
+      return RedirectToAction("Index");
+
+    }
+
+    [HttpPost("/restaurants/{id}/delete")]
+    public ActionResult Delete(int id)
+    {
+      Restaurant foundRestaurant = Restaurant.Find(id);
+      foundRestaurant.DeleteRestaurant();
+      return RedirectToAction("Index");
+      // return View();
+    }
 
     [HttpGet("/restaurants/{id}")]
     public ActionResult Show(int id)
