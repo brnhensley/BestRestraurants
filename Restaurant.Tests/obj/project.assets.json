@@ -5872,11 +5872,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Guest/Desktop/Resturaunt.Solution/Restaurant.Tests/Restaurant.Tests.csproj",
+      "projectUniqueName": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant.Tests/Restaurant.Tests.csproj",
       "projectName": "Restaurant.Tests",
-      "projectPath": "/Users/Guest/Desktop/Resturaunt.Solution/Restaurant.Tests/Restaurant.Tests.csproj",
+      "projectPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant.Tests/Restaurant.Tests.csproj",
       "packagesPath": "/Users/Guest/.nuget/packages/",
-      "outputPath": "/Users/Guest/Desktop/Resturaunt.Solution/Restaurant.Tests/obj/",
+      "outputPath": "/Users/Guest/Desktop/Restaurant.Solution/Restaurant.Tests/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
